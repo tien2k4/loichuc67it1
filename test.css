@@ -1,0 +1,441 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+html
+{
+    background-color:  #FDCED6;
+    background-image: url(./img/15.jpg);
+}
+.div1
+{
+    width: 100%;
+    height: auto;
+    /* height:450px; */
+    /* background-color: yellow; */
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.letter1
+{
+    width: 460px;
+    height: 250px;
+    background-color: #0a7479;
+    border:1px solid rgb(202, 194, 194);
+    position: relative;
+    box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
+}
+.flap1
+{
+  /* border-radius: 10px; */
+    width: 0;
+  height: 0;
+  border-left: 230px solid transparent;
+  border-right: 230px solid transparent;
+  border-top: 125px solid#C4DEE6;
+}
+.button
+{
+    width: 100%;
+    height: 100px;
+    /* background-color: green; */
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.b1
+{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(243, 99, 99);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+}
+.div2
+{
+    width: 100%;
+    height: 450px;
+    /* background-color: yellow; */
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  display: none;
+  
+}
+.letter2
+{
+    width: 460px;
+    height: 250px;
+    border:1px solid rgb(202, 194, 194);
+    background-color: #0a7479;
+    box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
+    position: relative;
+}
+.flap2
+{
+    width: 0;
+  height: 0;
+  border-left: 230px solid transparent;
+  border-right: 230px solid transparent;
+  border-top: 125px solid #b2dce9;
+  position: relative;
+}
+/* .letter3
+{
+    width: 460px;
+    height: 125px;
+    background-color: #FDCED6;
+} */
+.flap3
+{
+    width: 0;
+  height: 0;
+  border-left: 230px solid transparent;
+  border-right: 230px solid transparent;
+  border-bottom: 125px solid  #15c9d3;
+}
+.flape{
+  /* border-radius: 10px; */
+  width: 0;
+  height: 0;
+  border-bottom: 125px solid transparent;
+  border-top: 125px solid transparent;
+  border-right: 230px solid #66A4AD;
+  position: absolute;
+  right: 0;
+  top: 50%; /* Để căn giữa theo chiều dọc */
+  transform: translateY(-50%);
+} 
+.flap3 ,.flap2a{
+    transition: all 2.5s ease;
+    opacity: 0; /* Bắt đầu với opacity = 0 để ẩn flap2 và flap3 */
+}
+.flap2{
+    transition: all 0s ease;
+    opacity: 0;
+}
+ .flapd{
+  /* border-radius: 10px; */
+  width: 0;
+  height: 0;
+  border-bottom: 125px solid transparent;
+  border-top: 125px solid transparent;
+  border-right: 230px solid #66A4AD;
+  position: absolute;
+  right: 0;
+  top: 50%; /* Để căn giữa theo chiều dọc */
+  transform: translateY(-50%);
+} 
+.center{
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: rgb(22, 134, 169);
+  top:47%;
+  left: 48%;
+  border-radius: 100px;
+}
+.flap2a{
+  width: 0;
+  height: 0;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  border-top: 65px solid rgb(248, 251, 248);
+  position: absolute;
+  top:-66px;
+  left:-120px;
+   
+}
+
+.button2
+{
+    width: 100%;
+    height: 100px;
+    /* background-color: green; */
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  display: none;
+}
+.b2
+{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(249, 100, 229);
+    text-align: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+}
+.b2 a
+{
+  text-decoration: none;
+  color: #2c2929;
+  padding: 8px;
+}
+.letter4 {
+  width: 80%;
+  height: 300px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  display: none;
+  flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+  align-items: center; /* Căn giữa theo chiều ngang */
+  justify-content: center; /* Căn giữa theo chiều dọc */
+}
+
+.header h1 {
+  color: #ff4fdf;
+  font-style: italic;
+}
+
+.content {
+  margin-top: 20px;
+  color: #555;
+  text-align: left;
+  align-self: flex-start;
+}
+.content p
+{
+  font-size: 22px;
+  padding: 2px;
+  font-style: italic;
+}
+
+
+.signature {
+  align-self: flex-end; /* Đặt phần tử .signature ở phía bên phải */
+  margin-top: 40px;
+  text-align: right;
+}
+
+.signature p {
+  margin: 5px 0;
+  font-style: italic;
+  color: #2c2929;
+  font-size: 20px;
+}
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.paragraph {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  /* margin-right: 5px; */
+  animation: fadeIn 1s linear forwards;
+}
+
+.div3
+{
+    width: 100%;
+    height: 450px;
+    /* background-color: yellow; */
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  display: none;
+  
+}
+.letter6
+{
+    width: 460px;
+    height: 250px;
+    border:1px solid rgb(202, 194, 194);
+    background-color:  #0a7479;
+    box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
+    position: relative;
+}
+.flap5
+{
+    width: 0;
+  height: 0;
+  border-left: 230px solid transparent;
+  border-right: 230px solid transparent;
+  border-top: 125px solid #b2dce9;
+  position: relative;
+}
+.flapi
+{
+    width: 0;
+  height: 0;
+  border-left: 230px solid transparent;
+  border-right: 230px solid transparent;
+  border-top: 125px solid #b2dce9;
+  position: absolute;
+  top:0px;
+}
+/* .letter5
+{
+    width: 460px;
+    height: 125px;
+    background-color: #FDCED6;
+} */
+.flap4
+{
+    width: 0;
+  height: 0;
+  border-left: 230px solid transparent;
+  border-right: 230px solid transparent;
+  border-bottom: 125px solid  #15c9d3;
+  display: none;
+}
+
+.flap5a
+{
+  
+    width: 360px;
+    height: 120px;
+    background-color: #fff;
+    position: absolute;
+    top:-66px;
+    left:-150px;
+    transition: top 0.5s;
+   
+}
+.flapk{
+  width: 0;
+  height: 0;
+  border-top: 250px solid transparent; /* Độ dài cạnh */
+    border-left: 460px solid #0a7479;
+    position: absolute;
+    top:0px;
+}
+/* .flap5a{
+  width: 0;
+  height: 0;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  border-top: 65px solid rgb(248, 251, 248);
+  position: absolute;
+  top:-66px;
+  left:-120px;
+   
+} */
+.flapc{
+  /* border-radius: 10px; */
+  width: 0;
+  height: 0;
+  border-bottom: 125px solid transparent;
+  border-top: 125px solid transparent;
+  border-right: 230px solid #66A4AD;
+  position: absolute;
+  right: 0;
+  top: 50%; /* Để căn giữa theo chiều dọc */
+  transform: translateY(-50%);
+} 
+.center2
+{
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: rgb(22, 134, 169);
+  top:47%;
+  left: 48%;
+  border-radius: 100px;
+
+}
+
+@media only screen and (max-width: 768px) {
+  /* Điều chỉnh kích thước và căn giữa cho phần tử .div1 */
+  .div1 {
+      justify-content: center;
+  }
+
+  /* Điều chỉnh kích thước cho .letter1 */
+  .letter1 {
+      width: 90%;
+  }
+
+  /* Điều chỉnh kích thước cho .button */
+  .button {
+      justify-content: center;
+  }
+
+  /* Điều chỉnh kích thước cho .b1 */
+  .b1 {
+      width: 120px;
+      height: 40px;
+  }
+
+  /* Điều chỉnh kích thước cho .div2 */
+  .div2 {
+      height: auto;
+  }
+
+  /* Điều chỉnh kích thước cho .letter2 */
+  .letter2 {
+      width: 90%;
+  }
+
+  /* Điều chỉnh kích thước cho .button2 */
+  .button2 {
+      justify-content: center;
+  }
+
+  /* Điều chỉnh kích thước cho .b2 */
+  .b2 {
+      width: 120px;
+      height: 40px;
+  }
+
+  /* Điều chỉnh kích thước cho .letter4 */
+  .letter4 {
+      width: 90%;
+  }
+
+  /* Điều chỉnh kích thước cho .content p */
+  .content p {
+      font-size: 16px;
+  }
+  .div3 {
+    justify-content: center;
+}
+
+/* Điều chỉnh kích thước cho .letter6 */
+.letter6 {
+    width: 90%;
+}
+
+/* Điều chỉnh kích thước cho .b1 */
+.b1 {
+    width: 120px;
+    height: 40px;
+}
+
+/* Điều chỉnh kích thước cho .flap5a */
+.flap5a {
+    width: 70%;
+    height: 40px;
+}
+
+
+
+
+
+
+
+  
+  

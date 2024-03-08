@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" id="boss">
+<head>
+    <meta name="google-site-verification" content="i0u9bjrEcH6KrjKBJL03GEYwyc7j6dncp02mzwtf7dY" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Gửi lời chúc tới bạn :3 </title>
+</head>
+<body>
+   
+    <div class="div1" id="div1" onmouseenter="letter2()" onmouseleave="letter1()">
+        <div class="letter1" id="letter1">
+            <div class="flap1" id="flap1">
+            </div>
+            <div class="flapd"></div>
+             <div class="center"></div>
+        </div>
+      </div>
+          <div class="div2" id="div2">
+            <div class="letter3">
+                <div class="flap3" id="flap3"></div>
+            </div>
+            <div class="letter2" id="letter2">
+                <div class="flap2" id="flap2">
+                    <div class="flap2a" id="flap2a">
+                    </div>
+                </div>
+                <div class="flape"></div>
+            </div>
+          </div>
+
+          <label for="button" onclick="toggle()">
+            <div class="div3" id="div3" onmouseenter="t1()" onmouseleave="t2()">
+                <div class="letter5">
+                    <div class="flap4" id="flap4"></div>
+                </div>
+                <div class="letter6" id="letter6">
+                    <div class="flap5" id="flap5">
+                        <div class="flap5a" id="flap5a">
+                        </div>
+                    </div>
+                    <div class="flapc"></div>
+                    <div class="flapk"></div>
+                    <div class="flapi" id="flapi"></div>
+                    <div class="center2"></div>
+                </div>
+              </div>
+          </label>
+
+        <div class="button" id="button">
+            <button class="b1" id="b1" onclick="openletter()">Open</button>
+        </div>
+        <div class="letter4" id="c1">
+            <div class="header">
+                <h1>Chúc Mừng Ngày Quốc Tế Phụ Nữ 8/3!</h1>
+            </div>
+            <div class="content">
+                <p class="paragraph">Gửi_tới_những_bông_hoa_đẹp_nhất_67IT1!</p>
+                <p class="paragraph">Dành_tặng_những_lời_chúc_ấm_áp_nhất_đến_các_bạn_nữ_67IT1.</p>
+                <p class="paragraph">Chúc_bạn_có_một_ngày_8/3_ý_nghĩa,_vui_vẻ_và_nhận_được_nhiều_quà.</p>
+                <p class="paragraph">Mong_bạn_luôn_xinh_đẹp,_hạnh_phúc_bên_gia_đình_và_người_yêu_thương.</p>
+                <p class="paragraph">Happy_Women's_Day!!!</p>
+            </div>
+            <div class="signature">
+                <p>Trân trọng</p>
+                <p>Đẹp nhất sau mỗi</p>
+                <p> bạn tên Tiến=)))</p>
+            </div>
+        </div>
+        <div class="button2" id="b2">
+            
+        </div>
+    
+    <script>
+        function t1()
+        {
+            document.getElementById('flapi').style.display="none";
+            document.getElementById('flap4').style.display="flex";
+            document.getElementById("div3").addEventListener("mouseenter", function() {
+            document.getElementById("flap5a").style.top = "-80px";
+        });
+        
+            document.getElementById("div3").addEventListener("mouseleave", function() {
+            document.getElementById("flap5a").style.top = "0px";
+        });
+        }
+
+        function t2()
+        {
+            document.getElementById('flap4').style.display="none";
+            document.getElementById('flapi').style.display="flex";
+        }
+
+        document.getElementById('div1').style.display="none";
+        document.getElementById('div3').style.display="flex";
+        document.getElementById('button').style.display="none";
+
+        function toggle() {
+            document.getElementById('b1').click(); 
+        }
+        
+        function openletter() {
+            document.getElementById('div3').style.display = "none";
+            document.getElementById('div2').style.display = "flex";
+            setTimeout(function() {
+                document.getElementById('flap2').style.opacity = "1";
+                document.getElementById('flap3').style.opacity = "1";
+                document.getElementById('flap2a').style.opacity = "1";
+            }, 0);
+            setTimeout(function() {
+                document.getElementById('div2').style.display = "none";
+                document.getElementById('b1').style.display = "none";
+                document.getElementById('c1').style.display = "flex"; 
+                document.getElementById('b2').style.display = "flex";
+    
+                var paragraphs = document.querySelectorAll('.paragraph');
+                paragraphs.forEach(function(paragraph) {
+                    var content = paragraph.textContent.trim().replace(/-/g, ' '); 
+                    paragraph.innerHTML = ""; 
+        
+                    for (var i = 0; i < content.length; i++) {
+                        var letterSpan = document.createElement("span");
+                        letterSpan.textContent = content[i];
+                        letterSpan.className = "letter"; 
+                        paragraph.appendChild(letterSpan);
+                    }
+                });
+        
+                var spans = document.querySelectorAll('.letter');
+                var delay = 0.03 
+                spans.forEach(function(span, index) {
+                    span.style.animation = `fadeIn 1s linear forwards ${index * delay}s`;
+                });
+            }, 2000); 
+        }
+        
+    </script>
+</html>
